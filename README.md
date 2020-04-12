@@ -1,5 +1,7 @@
 # Linkar Demo Desktop App With-Automatic Classes
 
+executable in https://kosday.com/resources/
+
 This demo shows how a persistent client works with an automatic class and shows database information on a form.
 
 # MainWindow 
