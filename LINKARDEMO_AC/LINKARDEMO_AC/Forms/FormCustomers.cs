@@ -100,7 +100,6 @@ namespace LINKARDEMO
             string preSelectClause = "";
 
             bool calculated = true;
-            bool dictionaries = true;
             bool conversion = false;
             bool formatSpec = false;
             bool originalBuffer = true;
@@ -110,7 +109,7 @@ namespace LINKARDEMO
             int regPage = 10;
             int numPag = 1;
 
-            SelectOptions selectOptions = new SelectOptions(onlyitemid, pagination, regPage, numPag, calculated, conversion, formatSpec, originalBuffer, dictionaries);
+            SelectOptions selectOptions = new SelectOptions(onlyitemid, pagination, regPage, numPag, calculated, conversion, formatSpec, originalBuffer);
 
             string customVars = "";
             string error;
@@ -188,7 +187,6 @@ namespace LINKARDEMO
                 bool optimisticLock = false;
                 bool readAfter = false;
                 bool calculated = false;
-                bool dictionaries = false;
                 bool conversion = false;
                 bool formatSpec = false;
                 bool originalBuffer = false;
@@ -203,7 +201,7 @@ namespace LINKARDEMO
                     try
                     {
                         RecordIdType recordIdType = new RecordIdType();
-                        NewOptions newOptions = new NewOptions(recordIdType, readAfter, calculated, conversion, formatSpec, originalBuffer, dictionaries);
+                        NewOptions newOptions = new NewOptions(recordIdType, readAfter, calculated, conversion, formatSpec, originalBuffer);
                         List<Customer> lstCustomers = this._LinkarClt.New(filename, lstupd, newOptions, customVars);
                     }
                     catch(Exception ex)
@@ -215,7 +213,7 @@ namespace LINKARDEMO
                 {
                     try
                     {
-                        UpdateOptions updateOptions = new UpdateOptions(optimisticLock, readAfter, calculated, conversion, formatSpec, originalBuffer, dictionaries);
+                        UpdateOptions updateOptions = new UpdateOptions(optimisticLock, readAfter, calculated, conversion, formatSpec, originalBuffer);
                         List<Customer> lstCustomers = this._LinkarClt.Update(filename, lstupd, updateOptions, dataOrg, customVars);
                     }
                     catch(Exception ex)
